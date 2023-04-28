@@ -12,3 +12,9 @@ type Shirt struct {
 	Cost int `json:"cost"`;
 	Quantity int `json:"quantity"`;
 }
+type Pants struct {
+	ID string  `json:"id"`;
+	Title string `json:"title"`;
+	Cost int `json:"cost"`;
+	Quantity int `json:"quantity"`;
+}

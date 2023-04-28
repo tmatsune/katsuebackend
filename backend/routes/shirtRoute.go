@@ -64,7 +64,7 @@ func Test(c *gin.Context){
 
 type ShirtHandler struct {
 	Title string `json:"title"`;
-	RemAmount int `json:"remAmount"`
+	RemAmount int `json:"remAmount"`;
 }
 func removeFromDb(c *gin.Context) {
 	var shirtPtr *Shirt = &Shirt{};

@@ -22,6 +22,11 @@ func main(){
 		routes.UserRoutes(v1.Group("users/"))
 		routes.StripeRoutes(v1.Group("pay/"))
 	}
+	v2 := router.Group("v2")
+	{
+		routes.ManageUsrsRoute(v2.Group("adminUsers/"))
+		routes.SalesRoute(v2.Group("adminSale/"))
+	}
 
 	router.Run(":8000");
 	

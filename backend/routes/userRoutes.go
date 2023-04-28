@@ -32,7 +32,6 @@ type CreateHandler struct {
 	Email string `json:"email"`;
 	Password string `json:"password"`;
 }
-
 func createUser(c *gin.Context){
 	var cUser CreateHandler;
 	var err error = c.BindJSON(&cUser);

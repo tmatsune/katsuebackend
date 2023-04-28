@@ -10,7 +10,7 @@ import (
 	"os"
 )
 
-var connection string = "mongodb+srv://matsuneterence:buckets22@katsuetwo.ef851a5.mongodb.net/?retryWrites=true&w=majority"
+//var connection string = "mongodb+srv://matsuneterence:buckets22@katsuetwo.ef851a5.mongodb.net/?retryWrites=true&w=majority"
 
 
 //context that defines how long you can make a request;
