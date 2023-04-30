@@ -21,6 +21,7 @@ func main(){
 		routes.PantsRoute(v1.Group("pants/"))
 		routes.UserRoutes(v1.Group("users/"))
 		routes.StripeRoutes(v1.Group("pay/"))
+		//routes.ManageUsrsRoute(v1.Group("adminUsers/"))
 	}
 	v2 := router.Group("v2")
 	{

@@ -18,3 +18,7 @@ type Pants struct {
 	Cost int `json:"cost"`;
 	Quantity int `json:"quantity"`;
 }
+type Item struct { 
+	Title string `json:"title"`; 
+	Sold int `json:"sold"`; 
+}

@@ -11,7 +11,6 @@ import (
 )
 
 
-
 //context that defines how long you can make a request;
 type MongoDatabaseInstance struct {
 	DB *mongo.Database

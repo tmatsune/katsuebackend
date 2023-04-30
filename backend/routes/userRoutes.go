@@ -58,18 +58,24 @@ func createUser(c *gin.Context){
 		return;
 	}
 	fmt.Println(userResult);
-	c.IndentedJSON(http.StatusAccepted, gin.H{"message":"user created"});
+	cUser.hidePas();
+	c.IndentedJSON(http.StatusAccepted, cUser);
 }
 type Testing struct{
-	ID primitive.ObjectID `bson:"_id" json:"id,omitempty"`
-	Name string `bson:"name"`
-	Username string `bson:"username"`;
-	Email string `bson:"email"`
-	Password string `bson:"password"`
+	ID primitive.ObjectID `bson:"_id" json:"id,omitempty"`  //bson
+	Name string `json:"name"`
+	Username string `json:"username"`;
+	Email string `json:"email"`
+	Password string `json:"password"`
 }
+
 func (d *Testing)hidePass(){
 	d.Password = "";
 }
+func (u *CreateHandler)hidePas(){
+	u.Password = "";
+}
+
 func getUserFromDb(typ string, name string) (*Testing){
 	var res Testing = Testing{}
 	var result *Testing = &res;
